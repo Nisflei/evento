@@ -1,0 +1,24 @@
+name: Primeiro Pipeline
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Executando um comando
+        run: echo Hello, world! 
+
+      - name: Executando 2 comandos
+        run: |
+          echo Comando 1 executado,
+          echo comando 2 tambem executa.
+          
