@@ -22,9 +22,12 @@ jobs:
           echo Comando 1 executado,
           echo comando 2 tambem executa.
   deploy:
+    needs: build
     runs-on: ubuntu-lasted
     
     steps:
+      - uses: actions/checkout@v3
+
       - name: Publicando na Cloud
         run: echo Fazer deploy no Docker hub
     
