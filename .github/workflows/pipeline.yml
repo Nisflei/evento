@@ -21,4 +21,10 @@ jobs:
         run: |
           echo Comando 1 executado,
           echo comando 2 tambem executa.
-          
+  deploy:
+    runs-on: ubuntu-lasted
+    
+    steps:
+      - name: Publicando na Cloud
+        run: echo Fazer deploy no Docker hub
+    
